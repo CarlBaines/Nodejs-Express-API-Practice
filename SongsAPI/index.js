@@ -82,7 +82,7 @@ app.put('/songs/:id', (request, response) => {
 
 // DELETE request - used to remove resources from the server.
 app.delete('/songs/:id', (request, response) =>{
-    console.log('DELETE request received for ID:', request.params.id); // Add this line
+    console.log('DELETE request received for ID:', request.params.id); // Added this line for debugging.
     const songID = parseInt(request.params.id);
     const songIndex = songs.findIndex(s => s.id === songID);
     if(songIndex != -1){
